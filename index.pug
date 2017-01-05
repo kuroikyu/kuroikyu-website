@@ -1,0 +1,59 @@
+- var title = "kuroikyu | projects directory"
+- var description = "Directory for all my web projects"
+- var author = "Kuroi Kyu"
+- var image = "http://kuroikyu.com/assets/img/landing.jpg"
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color" content="#e1eef6")
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content="Projects, Portfolio, Kuroi, Kyu, HTML, CSS, JavaScript")
+    title= title
+
+    // Facebook's share tags
+    //- meta(property="fb:app_id" content="")
+    meta(property="og:url" content="http://kuroikyu.com")
+    meta(property="og:title" content=title)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=image)
+    meta(property="og:site_name" content="kuroikyu")
+
+    // Twitter share tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:content" content="@kuroikyu")
+    meta(name="twitter:creator" content="@kuroikyu")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=image)
+
+    // CSS
+    link(rel="stylesheet" type="text/css" href="assets/css/main.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel='stylesheet' type='text/css')
+  body
+    header#header
+      h1 kuroi#[span kyu]
+      hr
+
+    main#main
+      .wrapper
+        h2 projects //
+        ul
+          li
+            a(href="/30days30photos")
+              button #30days30photos
+          li
+            a(href="/wendigotattoo")
+              button Wendigo Tattoo
+          li
+            a(href="/weeks-to-go")
+              button Weeks to go
+          li
+            a(href="/christmas-card")
+              button 2016 Christmas Card
+          li
+            a(href="#")
+              button.disabled (empty)
