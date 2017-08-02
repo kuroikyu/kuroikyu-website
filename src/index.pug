@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color" content="#22222C")
+    title kuroikyu.com | welcome
+
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel='stylesheet' type='text/css')
+
+  body
+    section.landing
+      .wrapper
+        nav.navbar
+          ul
+            li.emoji ⚡️
+            li: a(href="#projects") Projects
+            li: a.highlight(href="#") Contact
+        .landing-text
+          //- img(src='./img/profile-picture.jpg', alt="Kuroi Kyu wearing sunglasses inside a car")
+          h1 Kuroi Kyu
+          h2.dimmed (Álvaro J. Martínez)
+
+          h2.job-desc BI Consultant & Web Developer
+
+          p.my-desc 
+            | I enjoy working with data. I'm very interested in machine learning. 
+            br
+            | I love using Node.js and Python. Re-learning C.
+
+          .social-media
+            a(href="https://github.com/kuroikyu") Code
+            a(href="https://twitter.com/kuroikyu") Twitter
+
+    section.current
+      .wrapper
+        .emoji ⚡️
+        .main-sentence
+          p My main focus now is 
+            span React
+        .secondary-sentence
+          p Follow my adventures on 
+            a(href="https://twitter.com/kuroikyu") Twitter
+
+    section.projects
+      .wrapper
+        h3 Projects

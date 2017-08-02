@@ -1,0 +1,174 @@
+// - - - - - - Variables - - - - - - //
+$main: #EEEEEE
+$highlight: #E04545
+$background: #22222C
+$white: #fff
+
+// - - - - - - Global Styles - - - - - - //
+
+html, body, button
+  font-family: "Roboto", sans-serif
+
+.wrapper
+  width: 1440px
+  max-width: 80%
+  margin: 0 auto
+
+li
+  list-style: none !important
+
+// IE fix
+button
+  border: none
+  outline: none
+
+// Other
+body
+  background-color: $background
+
+*
+  color: $main
+  box-sizing: border-box
+  font-weight: 400
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+
+section
+  height: 100vh
+
+// Landing Section
+.landing
+  text-align: center
+
+  .wrapper
+    height: 100%
+    position: relative
+
+.navbar
+  // background-color: red
+  // width: 100%
+  margin-top: 1.5em
+  padding-bottom: 1em
+  border-bottom: 2px solid darken($white, 60%)
+
+  ul
+    // width: 100%
+    display: flex
+    flex-direction: row
+
+    li
+      // min-width: 100px
+      margin-left: 2em
+      text-align: right
+      a
+        color: darken($white, 20%)
+      .highlight
+        border: 1px solid darken($white, 20%)
+        border-radius: 5px
+        padding: 5px 10px
+    .emoji
+      margin: 0
+      flex-grow: 1
+      text-align: left
+  h1
+    font-size: 2em
+
+.landing-text
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+  h1
+    font-size: 2.5em
+    font-weight: 300
+  h2
+    font-size: 1.3em
+    margin-bottom: .4em
+
+    &.job-desc
+      margin-bottom: 1.5em
+
+.dimmed
+  opacity: .5
+
+.my-desc
+  margin-bottom: 1.5em
+
+
+// Current (work) section
+.current
+  background-color: $highlight
+  position: relative
+  text-align: center
+
+  .wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  .emoji
+    font-size: 3em
+  
+  .main-sentence p
+    font-size: 1.6em
+    margin-bottom: .5em
+    span
+      font-weight: 700
+
+  .secondary-sentence p 
+    font-size: 1em
+    a
+      border-bottom: 2px solid $white
+      padding-bottom: 4px
+
+// Projects section
+.projects
+  background-color: $main
+  color: $background
+
+// - - - - - - Header Styles - - - - - - //
+// #header
+//   font-size: 1.6rem
+//   text-align: center
+//   color: $main
+//   margin-bottom: 90px
+//   h1
+//     span
+//       font-weight: 400
+//   hr
+//     width: 120px
+//     border: 1px solid $highlight
+
+// - - - - - - Main Styles - - - - - - //
+// #main
+//   h2
+//     color: $main
+//     font-size: 2rem
+//     font-weight: 400
+//   ul
+//     padding: 0
+//     li
+//       margin-bottom: 35px
+//       text-align: center
+//       button
+//         position: relative
+//         height: 60px
+//         width: 300px
+//         padding: 0
+//         font-size: 1.4rem
+//         color: $main
+//         cursor: pointer
+//         transition: all ease-in-out 100ms
+//         background-color: $background
+//         box-shadow: 0px 6px 0px 0px $highlight
+//         &:active
+//           transform: translate(0, 6px)
+//           box-shadow: 0px 0px 0px 0px $highlight
+//         &.disabled
+//           opacity: .4
+
