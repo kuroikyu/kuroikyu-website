@@ -12,7 +12,6 @@ const config = {
       { test: /\.jsx?$/, use: 'babel-loader' },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           { loader: 'style-loader' },
           { 
@@ -21,6 +20,10 @@ const config = {
           },
           { loader: 'postcss-loader' },
         ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'url-loader',
       },
       {
         test: /\.sass$/,
@@ -37,7 +40,7 @@ const config = {
       { 
         test: /\.pug$/, 
         use: [
-          { loader: 'html-loader' },
+          { loader: 'raw-loader' },
           { loader: 'pug-html-loader' }
         ]
       }

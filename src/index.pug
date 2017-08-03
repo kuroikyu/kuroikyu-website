@@ -17,7 +17,8 @@ html(lang="en")
             li: a(href="#projects") Projects
             li: a.highlight(href="#") Contact
         .landing-text
-          //- img(src='./img/profile-picture.jpg', alt="Kuroi Kyu wearing sunglasses inside a car")
+          
+          img.profile-pic(src='./src/img/profile-picture.jpg', alt="Kuroi Kyu wearing sunglasses inside a car")
           h1 Kuroi Kyu
           h2.dimmed (Álvaro J. Martínez)
 
@@ -29,8 +30,12 @@ html(lang="en")
             | I love using Node.js and Python. Re-learning C.
 
           .social-media
-            a(href="https://github.com/kuroikyu") Code
-            a(href="https://twitter.com/kuroikyu") Twitter
+            a(href="https://github.com/kuroikyu")
+              i.fa.fa-github(aria-hidden="true")
+              span Code
+            a(href="https://twitter.com/kuroikyu") 
+              i.fa.fa-twitter(aria-hidden="true")
+              span Twitter
 
     section.current
       .wrapper
@@ -40,8 +45,23 @@ html(lang="en")
             span React
         .secondary-sentence
           p Follow my adventures on 
-            a(href="https://twitter.com/kuroikyu") Twitter
+            a(href="https://twitter.com/kuroikyu") 
+              i.fa.fa-twitter(aria-hidden="true")
+              | Twitter
 
     section.projects
       .wrapper
         h3 Projects
+        ul.project-container
+          li.project
+            img.thumbnail(src="./src/img/carlosrmfotografia.png", alt="carlosrmfotografia.com thumbnail")
+            h1 CarlosRM Fotografia
+            p Personal site for a Spanish photographer.
+          li.project
+            img.thumbnail(src="./src/img/wendigotattoo.png", alt="wendigotattoo.com thumbnail")
+            h1 Wendigo Tattoo
+            p Personal site for a Spanish tattoo artist.
+          li.project
+            img.thumbnail(src="./src/img/2016christmascard.png", alt="2016christmascard thumbnail")
+            h1 2016 Chrsitmas Card
+            p Collaboration with Spanish illustrator Marta Buitrago.

@@ -4,6 +4,9 @@ $highlight: #E04545
 $background: #22222C
 $white: #fff
 
+$breakpoint-small: 850px
+$breakpoint-medium: 1280px
+
 // - - - - - - Global Styles - - - - - - //
 
 html, body, button
@@ -11,8 +14,10 @@ html, body, button
 
 .wrapper
   width: 1440px
-  max-width: 80%
+  max-width: 83%
   margin: 0 auto
+  @media screen and (max-width: $breakpoint-medium)
+    max-width: 90%
 
 li
   list-style: none !important
@@ -32,6 +37,8 @@ body
   font-weight: 400
   padding: 0
   margin: 0
+  @media screen and (max-width: $breakpoint-medium)
+    font-size: 14px
 
 a
   text-decoration: none
@@ -48,8 +55,6 @@ section
     position: relative
 
 .navbar
-  // background-color: red
-  // width: 100%
   margin-top: 1.5em
   padding-bottom: 1em
   border-bottom: 2px solid darken($white, 60%)
@@ -81,6 +86,14 @@ section
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  width: 100%
+
+  .profile-pic
+    height: 160px
+    width: 160px
+    object-fit: cover
+    border-radius: 100%
+    margin-bottom: 1em
 
   h1
     font-size: 2.5em
@@ -98,6 +111,15 @@ section
 .my-desc
   margin-bottom: 1.5em
 
+.social-media
+  a
+    padding: 0 2em
+    display: inline-flex
+    flex-direction: column
+
+    i
+      font-size: 3em
+      padding-bottom: 5px
 
 // Current (work) section
 .current
@@ -118,6 +140,7 @@ section
     font-size: 1.6em
     margin-bottom: .5em
     span
+      font-size: 1em
       font-weight: 700
 
   .secondary-sentence p 
@@ -125,11 +148,47 @@ section
     a
       border-bottom: 2px solid $white
       padding-bottom: 4px
+      i
+        padding-right: .25em
 
 // Projects section
 .projects
   background-color: $main
-  color: $background
+  min-height: 100vh
+  height: 100%
+  // padding-top: 5em
+  *
+    color: $background
+  
+  h3
+    padding: 4em 0 2em 0
+    font-size: 2.5em
+    font-weight: 400
+.project-container
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  // margin: 0 -2em
+
+.project
+  background-color: #fff
+  padding: 20px
+  border-radius: 5px
+  box-shadow: 0 2px 5px 1px transparentize(#000, .85)
+  margin: 1em 0
+  min-width: 300px
+  max-width: 32%
+  h1
+    padding: .5em 0
+    color: $highlight
+  @media screen and (max-width: $breakpoint-medium)
+    max-width: 48%;
+  @media screen and (max-width: $breakpoint-small)
+    max-width: 100%
+
+.thumbnail
+  width: 100%
+  height: auto
 
 // - - - - - - Header Styles - - - - - - //
 // #header
