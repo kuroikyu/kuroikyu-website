@@ -7,6 +7,8 @@ $white: #fff
 $breakpoint-small: 850px
 $breakpoint-medium: 1280px
 
+$transition: background 300ms ease-in-out, color 300ms ease-in-out
+
 // - - - - - - Global Styles - - - - - - //
 
 html, body, button
@@ -32,21 +34,26 @@ body
   background-color: $background
 
 *
-  color: $main
   box-sizing: border-box
-  font-weight: 400
+ul
+  margin: 0
+  padding: 0
+
+h1, h2, h3, h4, h5, h6, p, a, span, i
   padding: 0
   margin: 0
+  color: $main 
+  font-weight: 400
   @media screen and (max-width: $breakpoint-medium)
     font-size: 14px
-
+  
 a
   text-decoration: none
 
 section
   height: 100vh
 
-// Landing Section
+// - - - - - - Landing Section - - - - - - //
 .landing
   text-align: center
 
@@ -57,23 +64,27 @@ section
 .navbar
   margin-top: 1.5em
   padding-bottom: 1em
-  border-bottom: 2px solid darken($white, 60%)
+  border-bottom: 2px solid darken($main, 60%)
 
   ul
-    // width: 100%
     display: flex
     flex-direction: row
 
     li
-      // min-width: 100px
-      margin-left: 2em
+      margin-left: 1.5em
       text-align: right
       a
-        color: darken($white, 20%)
-      .highlight
-        border: 1px solid darken($white, 20%)
+        color: darken($main, 20%)
+        transition: $transition
+        padding: 5px 10px        
         border-radius: 5px
-        padding: 5px 10px
+        &:hover
+          color: $main
+          background-color: lighten($background, 10)
+
+      .highlight
+        border: 1px solid darken($main, 20%)
+
     .emoji
       margin: 0
       flex-grow: 1
@@ -113,15 +124,24 @@ section
 
 .social-media
   a
-    padding: 0 2em
+    margin: -.5em .5em
+    padding: .5em 1.5em
     display: inline-flex
     flex-direction: column
+    border-radius: 5px
+    transition: $transition
+    
+    &:hover
+      color: $highlight
+      background-color: lighten($background, 10)
+      span, i
+        color: $white
 
     i
       font-size: 3em
       padding-bottom: 5px
 
-// Current (work) section
+// - - - - - - Current (work) Section - - - - - - //
 .current
   background-color: $highlight
   position: relative
@@ -146,17 +166,20 @@ section
   .secondary-sentence p 
     font-size: 1em
     a
-      border-bottom: 2px solid $white
+      will-change: box-shadow
       padding-bottom: 4px
+      box-shadow: 0 2px 0 $main
+      transition: box-shadow 300ms ease-in-out
+      &:hover
+        box-shadow: 0 4px 0px $main
       i
         padding-right: .25em
 
-// Projects section
+// - - - - - - Projects Section - - - - - - //
 .projects
   background-color: $main
   min-height: 100vh
   height: 100%
-  // padding-top: 5em
   *
     color: $background
   
@@ -166,68 +189,29 @@ section
     font-weight: 400
 .project-container
   display: flex
+  flex-direction: row
   justify-content: space-between
   flex-wrap: wrap
-  // margin: 0 -2em
 
 .project
-  background-color: #fff
+  background-color: $main
   padding: 20px
   border-radius: 5px
-  box-shadow: 0 2px 5px 1px transparentize(#000, .85)
   margin: 1em 0
-  min-width: 300px
-  max-width: 32%
+  flex: 0 0 32%
+  box-shadow: 0 2px 5px 1px transparentize(#000, .85)
+  transition: box-shadow 300ms ease-in-out
+  &:hover
+    box-shadow: 0 4px 5px 2px transparentize(#000, .75)
   h1
     padding: .5em 0
+    margin: 0
     color: $highlight
   @media screen and (max-width: $breakpoint-medium)
-    max-width: 48%;
+    flex: 0 0 48%  
   @media screen and (max-width: $breakpoint-small)
-    max-width: 100%
+    flex: 0 0 100%
 
 .thumbnail
   width: 100%
   height: auto
-
-// - - - - - - Header Styles - - - - - - //
-// #header
-//   font-size: 1.6rem
-//   text-align: center
-//   color: $main
-//   margin-bottom: 90px
-//   h1
-//     span
-//       font-weight: 400
-//   hr
-//     width: 120px
-//     border: 1px solid $highlight
-
-// - - - - - - Main Styles - - - - - - //
-// #main
-//   h2
-//     color: $main
-//     font-size: 2rem
-//     font-weight: 400
-//   ul
-//     padding: 0
-//     li
-//       margin-bottom: 35px
-//       text-align: center
-//       button
-//         position: relative
-//         height: 60px
-//         width: 300px
-//         padding: 0
-//         font-size: 1.4rem
-//         color: $main
-//         cursor: pointer
-//         transition: all ease-in-out 100ms
-//         background-color: $background
-//         box-shadow: 0px 6px 0px 0px $highlight
-//         &:active
-//           transform: translate(0, 6px)
-//           box-shadow: 0px 0px 0px 0px $highlight
-//         &.disabled
-//           opacity: .4
-
