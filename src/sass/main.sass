@@ -1,0 +1,220 @@
+// - - - - - - Variables - - - - - - //
+$main: #EEEEEE
+$highlight: #E04545
+$background: #22222C
+$white: #fff
+
+$breakpoint-small: 850px
+$breakpoint-medium: 1280px
+
+$transition: background 300ms ease-in-out, color 300ms ease-in-out
+
+// - - - - - - Global Styles - - - - - - //
+
+html, body, button
+  font-family: "Roboto", sans-serif
+
+.wrapper
+  width: 1440px
+  max-width: 83%
+  margin: 0 auto
+  @media screen and (max-width: $breakpoint-medium)
+    max-width: 90%
+
+li
+  list-style: none !important
+
+// IE fix
+button
+  border: none
+  outline: none
+
+// Other
+body
+  background-color: $background
+
+*
+  box-sizing: border-box
+ul
+  margin: 0
+  padding: 0
+
+h1, h2, h3, h4, h5, h6, p, a, span, i
+  padding: 0
+  margin: 0
+  color: $main 
+  font-weight: 400
+  @media screen and (max-width: $breakpoint-medium)
+    font-size: 14px
+  
+a
+  text-decoration: none
+
+section
+  height: 100vh
+
+// - - - - - - Landing Section - - - - - - //
+.landing
+  text-align: center
+
+  .wrapper
+    height: 100%
+    position: relative
+
+.navbar
+  margin-top: 1.5em
+  padding-bottom: 1em
+  border-bottom: 2px solid darken($main, 60%)
+
+  ul
+    display: flex
+    flex-direction: row
+
+    li
+      margin-left: 1.5em
+      text-align: right
+      a
+        color: darken($main, 20%)
+        transition: $transition
+        padding: 5px 10px        
+        border-radius: 5px
+        &:hover
+          color: $main
+          background-color: lighten($background, 10)
+
+      .highlight
+        border: 1px solid darken($main, 20%)
+
+    .emoji
+      margin: 0
+      flex-grow: 1
+      text-align: left
+  h1
+    font-size: 2em
+
+.landing-text
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+
+  .profile-pic
+    height: 160px
+    width: 160px
+    object-fit: cover
+    border-radius: 100%
+    margin-bottom: 1em
+
+  h1
+    margin: 0
+    font-size: 2.5em
+    // font-weight: 400
+    margin-bottom: .2em
+  h2
+    font-weight: 300
+    font-size: 1.3em
+    margin-bottom: .4em
+
+    &.job-desc
+      margin-bottom: 1.5em
+
+.dimmed
+  opacity: .5
+
+.my-desc
+  margin-bottom: 1.5em
+
+.social-media
+  a
+    margin: -.5em .5em
+    padding: .5em 1.5em
+    display: inline-flex
+    flex-direction: column
+    border-radius: 5px
+    transition: $transition
+    
+    &:hover
+      color: $highlight
+      background-color: lighten($background, 10)
+      span, i
+        color: $white
+
+    i
+      font-size: 3em
+      padding-bottom: 5px
+
+// - - - - - - Current (work) Section - - - - - - //
+.current
+  background-color: $highlight
+  position: relative
+  text-align: center
+
+  .wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  .emoji
+    font-size: 3em
+  
+  .main-sentence p
+    font-size: 1.6em
+    margin-bottom: .5em
+    span
+      font-size: 1em
+      font-weight: 700
+
+  .secondary-sentence p 
+    font-size: 1em
+    a
+      will-change: box-shadow
+      padding-bottom: 4px
+      box-shadow: 0 2px 0 $main
+      transition: box-shadow 300ms ease-in-out
+      &:hover
+        box-shadow: 0 4px 0px $main
+      i
+        padding-right: .25em
+
+// - - - - - - Projects Section - - - - - - //
+.projects
+  background-color: $main
+  min-height: 100vh
+  height: 100%
+  *
+    color: $background
+  
+  h3
+    padding: 4em 0 2em 0
+    font-size: 2.5em
+    font-weight: 400
+.project-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+
+.project
+  background-color: $main
+  padding: 20px
+  border-radius: 5px
+  margin: 1em 0
+  flex: 0 0 32%
+  box-shadow: 0 2px 5px 1px transparentize(#000, .85)
+  transition: box-shadow 300ms ease-in-out
+  &:hover
+    box-shadow: 0 4px 5px 2px transparentize(#000, .75)
+  h1
+    padding: .5em 0
+    margin: 0
+    color: $highlight
+  @media screen and (max-width: $breakpoint-medium)
+    flex: 0 0 48%  
+  @media screen and (max-width: $breakpoint-small)
+    flex: 0 0 100%
+
+.thumbnail
+  width: 100%
+  height: auto
