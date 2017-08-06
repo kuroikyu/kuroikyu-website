@@ -1,11 +1,47 @@
+- var title = "kuroikyu.com | welcome"
+- var description = "Your friendly neighbourhood web developer"
+- var author = "Kuroi Kyu"
+- var image = "https://carlosrmfotografia.com/landing.png"
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
     meta(name="theme-color" content="#22222C")
-    title kuroikyu.com | welcome
 
+    title=title
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content="Kuroi, Kyu, Alvaro, Martinez, Web Development, webdev, Portfolio")
+
+    // Responsive meta tag
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    // icons
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", href="/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/manifest.json")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#22222C")
+
+    // Facebook's share tags
+    //- meta(property="fb:app_id" content="")
+    meta(property="og:url" content="https://kuroikyu.com/")
+    meta(property="og:title" content=title)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=image)
+    meta(property="og:site_name" content="Kuroi Kyu")
+
+    // Twitter share tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:content" content="@kuroikyu")
+    meta(name="twitter:creator" content="@kuroikyu")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=image)
+
+    // Fonts
     link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel='stylesheet' type='text/css')
 
   body
@@ -18,7 +54,7 @@ html(lang="en")
             li: a.highlight(href="mailto:contact@kuroikyu.com" target="_blank" rel="nofollow") Contact
         .landing-text
           
-          img.profile-pic(src='./src/img/profile-picture.jpg', alt="Kuroi Kyu wearing sunglasses inside a car")
+          img.profile-pic(src='./src/img/profile-picture.min.jpg', alt="Kuroi Kyu wearing sunglasses inside a car")
           h1 Kuroi Kyu
           h2.dimmed (Álvaro J. Martínez)
 
@@ -54,14 +90,14 @@ html(lang="en")
         h3 Projects
         ul.project-container
           li.project: a(href="https://carlosrmfotografia.com" target="_blank" rel="nofollow")
-            img.thumbnail(src="./src/img/carlosrmfotografia.png", alt="carlosrmfotografia.com thumbnail")
+            img.thumbnail(src="./src/img/carlosrmfotografia.min.jpg", alt="carlosrmfotografia.com thumbnail")
             h1 CarlosRM Fotografia
             p Personal site for a Spanish photographer.
           li.project: a(href="https://kuroikyu.com/wendigotattoo" target="_blank" rel="nofollow")
-            img.thumbnail(src="./src/img/wendigotattoo.png", alt="wendigotattoo.com thumbnail")
+            img.thumbnail(src="./src/img/wendigotattoo.min.jpg", alt="wendigotattoo.com thumbnail")
             h1 Wendigo Tattoo
             p Personal site for a Spanish tattoo artist.
           li.project: a(href="https://kuroikyu.com/christmas-card" target="_blank" rel="nofollow")
-            img.thumbnail(src="./src/img/2016christmascard.png", alt="2016christmascard thumbnail")
+            img.thumbnail(src="./src/img/2016christmascard.min.jpg", alt="2016christmascard thumbnail")
             h1 2016 Chrsitmas Card
             p Collaboration with Spanish illustrator Marta Buitrago.
