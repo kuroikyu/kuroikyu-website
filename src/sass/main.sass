@@ -52,17 +52,32 @@ a
 
 section
   height: 100vh
+  position: relative
+
+.chevron
+  position: absolute
+  bottom: 3em
+  left: 50%
+  width: 1em
+  height: 1em
+  border-style: solid
+  border-width: 3px 3px 0 0
+  transform: rotate(135deg) translateX(75%)
+  vertical-align: top
 
 // - - - - - - Landing Section - - - - - - //
 .landing
   text-align: center
+
+  .chevron
+    border-color: $highlight
 
   .wrapper
     height: 100%
     position: relative
 
 .navbar
-  margin-top: 1.5em
+  padding-top: 1.5em
   padding-bottom: 1em
   border-bottom: 2px solid darken($main, 60%)
 
@@ -109,7 +124,6 @@ section
   h1
     margin: 0
     font-size: 2.5em
-    // font-weight: 400
     margin-bottom: .2em
   h2
     font-weight: 300
@@ -149,6 +163,9 @@ section
   background-color: $highlight
   position: relative
   text-align: center
+
+  .chevron
+    border-color: $main
 
   .wrapper
     position: absolute
