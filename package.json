@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "purge": "rm -rf dist"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
