@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "purge": "rm -rf dist"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -15,6 +16,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.0",
     "html-webpack-plugin": "^2.30.1",
