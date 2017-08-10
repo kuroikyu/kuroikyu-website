@@ -4,7 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtracTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    vendor: [
+      'normalize.css',
+      'font-awesome/css/font-awesome.min.css',
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
@@ -61,6 +67,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.pug',
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime',
