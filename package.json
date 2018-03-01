@@ -11,7 +11,7 @@
     "purge": "rm -rf dist"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^7.2.6",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
@@ -20,7 +20,7 @@
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.0",
     "html-webpack-plugin": "^2.30.1",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.6",
     "pug": "^2.0.0-rc.2",
     "pug-html-loader": "^1.1.5",
@@ -29,8 +29,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
   },
   "browserList": {
     "production": [
