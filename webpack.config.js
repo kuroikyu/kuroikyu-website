@@ -13,7 +13,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
@@ -74,7 +74,7 @@ const config = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime',
     }),
-    new ExtracTextPlugin("[name].[chunkhash].css"),
+    new ExtracTextPlugin("[name].[hash].css"),
   ],
 };
 
