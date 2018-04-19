@@ -1,49 +1,20 @@
 {
   "name": "kuroikyu.github.io",
   "version": "1.4.0",
-  "main": "index.js",
+  "private": true,
   "homepage": "https://kuroikyu.com/",
   "repository": "https://github.com/kuroikyu/kuroikyu.github.io.git",
   "author": "kuroikyu <kuroikyu+git@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack -p",
-    "purge": "rm -rf dist"
-  },
-  "devDependencies": {
-    "autoprefixer": "^8.2.0",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.11",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.1.0",
-    "node-sass": "^4.8.3",
-    "postcss-loader": "^2.1.2",
-    "pug": "^2.0.3",
-    "pug-html-loader": "^1.1.5",
-    "pug-loader": "^2.3.0",
-    "raw-loader": "^0.5.1",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "url-loader": "^1.0.1",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.2"
-  },
-  "browserList": {
-    "production": [
-      "last 2 version",
-      "ie 9"
-    ],
-    "developlment": [
-      "last 1 version"
-    ]
-  },
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "normalize.css": "^8.0.0"
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
