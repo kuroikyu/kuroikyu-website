@@ -9,6 +9,7 @@ const Header = styled.header`
   padding: 8rem 0rem 0 13rem;
   position: relative;
   --section-color: var(--green);
+  height: 92.5vh;
 
   .myName {
     font-family: var(--title-font);
@@ -101,10 +102,6 @@ const Landing = () => (
     <h1>
       Front-end Developer &<br />Visual Designer
     </h1>
-    <LandingImage
-      src="http://res.cloudinary.com/kuroikyu/image/upload/c_crop,g_west,h_2700,w_3850,x_0/v1524401357/kuroikyu-landing"
-      alt=""
-    />
     <HeaderDetails>
       <BodyText>I design and build for the web</BodyText>
       <HRule />
@@ -121,6 +118,10 @@ const Landing = () => (
       </SocialContainer>
       <ContactMeButton href="mailto:hello@kuroikyu.com">hello@kuroikyu.com</ContactMeButton>
     </HeaderDetails>
+    <LandingImage
+      src="http://res.cloudinary.com/kuroikyu/image/upload/c_crop,g_west,h_2700,w_3850,x_0/v1524401357/kuroikyu.com/kuroikyu-landing"
+      alt="Alvaro J. Martinez"
+    />
   </Header>
 );
 
