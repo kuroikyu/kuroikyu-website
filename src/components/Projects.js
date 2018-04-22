@@ -32,10 +32,10 @@ const SectionTitle = styled.h2`
   &::before {
     content: '';
     position: absolute;
-    height: 100%;
+    height: 120%;
     width: calc(13rem + 70%);
     left: -13rem;
-    top: 0;
+    top: -7.5%;
     z-index: -1;
     background: var(--section-color);
   }
@@ -43,6 +43,7 @@ const SectionTitle = styled.h2`
 
 const SectionDescription = BodyText.extend`
   line-height: 2;
+  margin-top: 2em;
 `;
 
 const ProjectList = styled.ul`
@@ -107,8 +108,8 @@ class Projects extends Component {
         <SectionDetails>
           <SectionTitle>Projects</SectionTitle>
           <SectionDescription>
-            Let's cut to the chase! Here's a quick look at some <br /> of my lastest work both
-            design and code.
+            Let's cut to the chase! Here's a quick look at <br /> my most recent work both design
+            and code.
           </SectionDescription>
         </SectionDetails>
         <ProjectList>
@@ -135,3 +136,4 @@ class Projects extends Component {
 }
 
 export default Projects;
+export { SectionDetails, SectionTitle, SectionDescription };

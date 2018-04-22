@@ -41,7 +41,7 @@ const HRule = styled.hr`
   width: 1em;
 `;
 
-const SocialContainer = styled.div`
+const StyledSocialContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 24px);
   grid-column-gap: 2em;
@@ -95,6 +95,20 @@ const ColorBlock = styled.div`
   height: 18.2em;
 `;
 
+const SocialContainer = () => (
+  <StyledSocialContainer>
+    <a href="https://github.com/kuroikyu">
+      <FAIcon icon={GitHub} />
+    </a>
+    <a href="https://twitter.com/kuroikyu">
+      <FAIcon icon={Twitter} />
+    </a>
+    <a href="https://www.behance.net/kuroikyu">
+      <FAIcon icon={Behance} />
+    </a>
+  </StyledSocialContainer>
+);
+
 const Landing = () => (
   <Header>
     <ColorBlock />
@@ -106,7 +120,7 @@ const Landing = () => (
       <BodyText>I design and build for the web</BodyText>
       <HRule />
       <SocialContainer>
-        <a href="https://github.com/kuroikyu">
+        {/* <a href="https://github.com/kuroikyu">
           <FAIcon icon={GitHub} />
         </a>
         <a href="https://twitter.com/kuroikyu">
@@ -114,7 +128,7 @@ const Landing = () => (
         </a>
         <a href="https://www.behance.net/kuroikyu">
           <FAIcon icon={Behance} />
-        </a>
+        </a> */}
       </SocialContainer>
       <ContactMeButton href="mailto:hello@kuroikyu.com">hello@kuroikyu.com</ContactMeButton>
     </HeaderDetails>
@@ -126,4 +140,4 @@ const Landing = () => (
 );
 
 export default Landing;
-export { BodyText };
+export { BodyText, SocialContainer, ContactMeButton };

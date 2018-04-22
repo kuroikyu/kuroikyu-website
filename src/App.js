@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Landing from './components/Landing';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
       <div className="App">
         <Landing />
         <Projects projects={this.state.projects} windowWidth={this.state.windowWidth} />
+        <Footer />
       </div>
     );
   }
