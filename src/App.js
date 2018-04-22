@@ -7,20 +7,20 @@ import './App.css';
 class App extends Component {
   state = {
     projects: [],
+    windowWidth: 756,
   };
 
   async componentDidMount() {
-    // const projects = await (await fetch('http://localhost:8000/wp-json/wp/v2/projects/')).json();
-    // this.setState({ projects });
+    const projects = await (await fetch('http://192.168.0.10:8000/wp-json/wp/v2/projects/')).json();
+    const windowWidth = window.innerWidth;
+    this.setState({ projects, windowWidth });
   }
 
   render() {
-    const projects = this.state.projects.filter(project => project.acf.display);
-
     return (
       <div className="App">
         <Landing />
-        <Projects projects={projects} />
+        <Projects projects={this.state.projects} windowWidth={this.state.windowWidth} />
       </div>
     );
   }

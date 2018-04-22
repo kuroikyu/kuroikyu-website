@@ -9,7 +9,7 @@ const Header = styled.header`
   padding: 8rem 0rem 0 13rem;
   position: relative;
   --section-color: var(--green);
-  height: 92.5vh;
+  height: 100vh;
 
   .myName {
     font-family: var(--title-font);
@@ -126,3 +126,4 @@ const Landing = () => (
 );
 
 export default Landing;
+export { BodyText };
