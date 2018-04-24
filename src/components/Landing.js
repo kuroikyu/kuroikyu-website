@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FAIcon from '@fortawesome/react-fontawesome';
 import Behance from '@fortawesome/fontawesome-free-brands/faBehance';
@@ -134,6 +135,10 @@ const Landing = ({ windowWidth }) => {
       />
     </Header>
   );
+};
+
+Landing.propTypes = {
+  windowWidth: PropTypes.number.isRequired,
 };
 
 export default Landing;
