@@ -47,12 +47,13 @@ const SectionDescription = BodyText.extend`
 `;
 
 const ProjectList = styled.ul`
-  margin: 0 6.5em;
-  padding: 5em 0;
+  margin: 0 13rem;
+  padding: 5em 0 10em 0;
   list-style: none;
 
   display: grid;
   grid-row-gap: 3.25em;
+  place-items: center;
   li {
     position: relative;
   }
