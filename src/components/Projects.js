@@ -4,13 +4,32 @@ import styled from 'styled-components';
 import ExternalLink from 'react-feather/dist/icons/external-link';
 import { BodyText } from './Landing';
 
-const Spacer = styled.div`
+const SpacerBottom = styled.div`
+  --spacer-height: 5em;
+  --spacer-width: 6.5em;
   background-color: var(--light-background);
   position: absolute;
-  height: 5em;
-  ${props => (props.bottom ? 'bottom: -5em;' : 'top: -5em;')};
-  ${props => (props.bottom ? 'width: 6.5em;' : 'width: calc(100% - 6.5em);')};
-  ${props => (props.bottom ? 'left: 0;' : 'right: 0;')};
+  height: var(--spacer-height);
+
+  width: var(--spacer-width);
+  bottom: calc(-1 * var(--spacer-height));
+  left: 0;
+
+  @media (max-width: 1300px) {
+    --spacer-height: 3em;
+    --spacer-width: 4em;
+  }
+  @media (max-width: 425px) {
+    --spacer-height: 2em;
+    --spacer-width: 2em;
+  }
+`;
+
+const SpacerTop = SpacerBottom.extend`
+  left: initial;
+  width: calc(100% - var(--spacer-width));
+  top: calc(-1 * var(--spacer-height));
+  right: 0;
 `;
 
 const Main = styled.main`
@@ -22,6 +41,12 @@ const Main = styled.main`
 
 const SectionDetails = styled.div`
   padding: 8rem 0rem 0 13rem;
+  @media (max-width: 1300px) {
+    padding: 6rem 0 0 8rem;
+  }
+  @media (max-width: 425px) {
+    padding: 3rem 2rem 0 2rem;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -39,11 +64,15 @@ const SectionTitle = styled.h2`
     z-index: -1;
     background: var(--section-color);
   }
+  @media (max-width: 425px) {
+    font-size: 3.2em;
+  }
 `;
 
 const SectionDescription = BodyText.extend`
   line-height: 2;
   margin-top: 2em;
+  max-width: 22em;
 `;
 
 const ProjectList = styled.ul`
@@ -56,6 +85,21 @@ const ProjectList = styled.ul`
   place-items: center;
   li {
     position: relative;
+  }
+  @media (max-width: 1300px) {
+    margin: 0 8rem;
+    padding-bottom: 8rem;
+  }
+  @media (max-width: 1024px) {
+    margin: 0 4rem;
+    padding-bottom: 6rem;
+  }
+  @media (max-width: 425px) {
+    padding-bottom: 4rem;
+  }
+  @media (max-width: 425px) {
+    margin: 0;
+    grid-row-gap: 7em;
   }
 `;
 
@@ -85,6 +129,11 @@ const ProjectLink = styled.a`
   svg {
     margin-left: 10px;
   }
+  @media (max-width: 425px) {
+    font-size: 1em;
+    top: -1.75em;
+    left: 2em;
+  }
 `;
 
 const Project = styled.img`
@@ -106,12 +155,11 @@ class Projects extends Component {
 
     return (
       <Main>
-        <Spacer />
+        <SpacerBottom />
         <SectionDetails>
           <SectionTitle>Projects</SectionTitle>
           <SectionDescription>
-            Let's cut to the chase! Here's a quick look at <br /> my most recent work both design
-            and code.
+            Let's cut to the chase! Here's a quick look at my most recent work both design and code.
           </SectionDescription>
         </SectionDetails>
         <ProjectList>
@@ -131,7 +179,7 @@ class Projects extends Component {
             </div>
           ))}
         </ProjectList>
-        <Spacer bottom />
+        <SpacerTop />
       </Main>
     );
   }
