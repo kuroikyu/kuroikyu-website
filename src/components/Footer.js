@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   margin: 4em 0 6em 0;
 
   ${SectionDescription} {
+    max-width: 25em;
     span {
       color: var(--white);
     }
@@ -19,12 +20,23 @@ const StyledFooter = styled.footer`
     margin: 0;
     margin-right: 4em;
   }
+  @media (max-width: 425px) {
+    padding: 6em 0;
+    margin: 0;
+    ${ContactMeButton} {
+      margin: 1.5em auto;
+    }
+  }
 `;
 
 const ContactContainer = styled.div`
   margin-top: 3em;
   display: flex;
   align-items: center;
+  @media (max-width: 425px) {
+    flex-direction: column-reverse;
+    place-items: center;
+  }
 `;
 
 const Footer = () => (
