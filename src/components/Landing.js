@@ -10,7 +10,7 @@ const Header = styled.header`
   position: relative;
   --section-color: var(--green);
   height: 100vh;
-
+  max-height: 1250px;
   .myName {
     font-family: var(--title-font);
     font-size: 1.3em;
@@ -79,6 +79,7 @@ const ContactMeButton = styled.a`
 const LandingImage = styled.img`
   height: auto;
   width: 55vw;
+  max-width: 1400px;
   position: absolute;
   right: 0;
   top: 0;
@@ -109,35 +110,31 @@ const SocialContainer = () => (
   </StyledSocialContainer>
 );
 
-const Landing = () => (
-  <Header>
-    <ColorBlock />
-    <span className="myName">Álvaro J. Martínez</span>
-    <h1>
-      Front-end Developer &<br />Visual Designer
-    </h1>
-    <HeaderDetails>
-      <BodyText>I design and build for the web</BodyText>
-      <HRule />
-      <SocialContainer>
-        {/* <a href="https://github.com/kuroikyu">
-          <FAIcon icon={GitHub} />
-        </a>
-        <a href="https://twitter.com/kuroikyu">
-          <FAIcon icon={Twitter} />
-        </a>
-        <a href="https://www.behance.net/kuroikyu">
-          <FAIcon icon={Behance} />
-        </a> */}
-      </SocialContainer>
-      <ContactMeButton href="mailto:hello@kuroikyu.com">hello@kuroikyu.com</ContactMeButton>
-    </HeaderDetails>
-    <LandingImage
-      src="http://res.cloudinary.com/kuroikyu/image/upload/c_crop,g_west,h_2700,w_3850,x_0/v1524401357/kuroikyu.com/kuroikyu-landing"
-      alt="Alvaro J. Martinez"
-    />
-  </Header>
-);
+const Landing = ({ windowWidth }) => {
+  const cloudinary = 'https://res.cloudinary.com/kuroikyu/image/upload';
+  const iWidth = windowWidth >= 1400 ? 1400 : windowWidth;
+  const cOptions = `w_${iWidth}/f_auto/q_auto:good/dpr_auto`;
+  return (
+    <Header>
+      <ColorBlock />
+      <span className="myName">Álvaro J. Martínez</span>
+      <h1>
+        Front-end Developer &<br />Visual Designer
+      </h1>
+      <HeaderDetails>
+        <BodyText>I design and build for the web</BodyText>
+        <HRule />
+        <SocialContainer />
+        <ContactMeButton href="mailto:hello@kuroikyu.com">hello@kuroikyu.com</ContactMeButton>
+      </HeaderDetails>
+      <LandingImage
+        src={`${cloudinary}/${cOptions}/v1524401357/kuroikyu.com/kuroikyu-landing`}
+        // src="http://res.cloudinary.com/kuroikyu/image/upload/c_crop,g_west,h_2700,w_3850,x_0/v1524401357/kuroikyu.com/kuroikyu-landing"
+        alt="Alvaro J. Martinez"
+      />
+    </Header>
+  );
+};
 
 export default Landing;
 export { BodyText, SocialContainer, ContactMeButton };

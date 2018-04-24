@@ -18,10 +18,11 @@ class App extends Component {
   }
 
   render() {
+    const { projects, windowWidth } = this.state;
     return (
       <div className="App">
-        <Landing />
-        <Projects projects={this.state.projects} windowWidth={this.state.windowWidth} />
+        <Landing windowWidth={windowWidth} />
+        <Projects projects={projects} windowWidth={windowWidth} />
         <Footer />
       </div>
     );
