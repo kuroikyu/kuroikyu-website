@@ -18,6 +18,39 @@ const Header = styled.header`
     text-transform: uppercase;
     padding-left: 0.3rem;
   }
+  @media (max-width: 1750px) {
+    height: auto;
+    margin-bottom: 10em;
+  }
+  @media (max-width: 1300px) {
+    padding: 6rem 0 0 8rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 5rem 0 2rem 0;
+    h1,
+    .myName {
+      margin-left: 8rem;
+    }
+  }
+  @media (max-width: 425px) {
+    padding: 5rem 1rem;
+    h1,
+    .myName {
+      margin-left: 0rem;
+    }
+  }
+  @media (max-width: 415px) {
+    padding: 4rem 1rem 2rem 1rem;
+    h1 {
+      font-size: 3.2em;
+    }
+  }
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 3em;
+    }
+  }
 `;
 
 const HeaderDetails = styled.div`
@@ -31,15 +64,28 @@ const HeaderDetails = styled.div`
   justify-content: space-between;
   text-align: center;
   font-size: 1.2em;
+  @media (max-width: 1750px) {
+    margin-top: 2em;
+    margin-left: 3.5em;
+  }
+  @media (max-width: 1300px) {
+    height: 12em;
+  }
+  @media (max-width: 1024px) {
+    width: auto;
+    margin: 4em auto;
+  }
 `;
 
 const BodyText = styled.p`
   --light-text: rgba(238, 238, 238, 0.8);
   color: var(--light-text);
+  margin: 0;
 `;
 
 const HRule = styled.hr`
   width: 1em;
+  margin: 0 auto;
 `;
 
 const StyledSocialContainer = styled.div`
@@ -86,6 +132,19 @@ const LandingImage = styled.img`
   top: 0;
   padding-top: inherit;
   z-index: -1;
+  @media (max-width: 1750px) {
+    max-width: 45vw;
+  }
+  @media (max-width: 1024px) {
+    position: initial;
+    max-width: initial;
+    display: block;
+    width: 100%;
+    padding: 0 4rem;
+  }
+  @media (max-width: 425px) {
+    padding: 0;
+  }
 `;
 
 const ColorBlock = styled.div`
@@ -95,6 +154,13 @@ const ColorBlock = styled.div`
   background: var(--section-color);
   width: 6.5em;
   height: 18.2em;
+  @media (max-width: 1300px) {
+    width: 4em;
+  }
+  @media (max-width: 425px) {
+    height: 1rem;
+    width: 50%;
+  }
 `;
 
 const SocialContainer = () => (
@@ -130,7 +196,6 @@ const Landing = ({ windowWidth }) => {
       </HeaderDetails>
       <LandingImage
         src={`${cloudinary}/${cOptions}/v1524401357/kuroikyu.com/kuroikyu-landing`}
-        // src="http://res.cloudinary.com/kuroikyu/image/upload/c_crop,g_west,h_2700,w_3850,x_0/v1524401357/kuroikyu.com/kuroikyu-landing"
         alt="Alvaro J. Martinez"
       />
     </Header>
