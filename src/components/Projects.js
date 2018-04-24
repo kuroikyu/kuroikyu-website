@@ -89,6 +89,7 @@ const ProjectLink = styled.a`
 
 const Project = styled.img`
   width: 100%;
+  max-width: 1400px;
 `;
 
 class Projects extends Component {
@@ -100,8 +101,8 @@ class Projects extends Component {
   render() {
     const { projects, windowWidth } = this.props;
     const cloudinary = 'https://res.cloudinary.com/kuroikyu/image/upload';
-    const iWidth = windowWidth > 1400 ? 1080 : windowWidth;
-    const cOptions = `w_${iWidth}/f_auto/q_auto:good/dpr_auto`;
+    const iWidth = windowWidth >= 1400 ? 1400 : windowWidth;
+    const cOptions = `w_${iWidth}/f_auto/q_auto:eco/dpr_auto`;
 
     return (
       <Main>
