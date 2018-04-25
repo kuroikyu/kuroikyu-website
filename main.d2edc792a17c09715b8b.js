@@ -1,1 +1,0 @@
-webpackJsonp([1],[function(e,t,o){"use strict";o(1);var c=document.querySelector(".scroll-to-projects"),n=document.querySelector("#projects");c.addEventListener("click",function(e){e.preventDefault(),n.scrollIntoView({behavior:"smooth"})})},function(e,t){}],[0]);

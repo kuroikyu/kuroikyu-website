@@ -1,12 +1,9 @@
-import './sass/main.sass'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'normalize.css';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-// Smooth scroll-to
-const projectsButton = document.querySelector('.scroll-to-projects');
-const projectsArea = document.querySelector('#projects');
-
-projectsButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  projectsArea.scrollIntoView({
-    behavior: 'smooth',
-  });
-});
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
