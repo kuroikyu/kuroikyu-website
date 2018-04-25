@@ -12,7 +12,7 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const projects = await (await fetch('http://192.168.0.10:8000/wp-json/wp/v2/projects/')).json();
+    const projects = await (await fetch('http://35.227.150.131/wp-json/wp/v2/projects/')).json();
     const windowWidth = window.innerWidth;
     this.setState({ projects, windowWidth });
   }
