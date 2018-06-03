@@ -12,9 +12,21 @@ class App extends Component {
   };
 
   async componentDidMount() {
+    // Reinstate data from localStorage
+    const localStorageData = localStorage.getItem('kuroikyu.com-state');
+    if (localStorageData) {
+      this.setState(JSON.parse(localStorageData));
+    }
+
+    // Fetch projects from API
     const projects = await (await fetch('https://wp.kuroikyu.com/wp-json/wp/v2/projects/')).json();
     const windowWidth = window.innerWidth;
     this.setState({ projects, windowWidth });
+  }
+
+  componentDidUpdate() {
+    const state = JSON.stringify(this.state);
+    localStorage.setItem('kuroikyu.com-state', state);
   }
 
   render() {
