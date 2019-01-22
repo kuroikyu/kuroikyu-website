@@ -1,5 +1,7 @@
 import './sass/main.sass'
 
+// Test
+
 // Smooth scroll-to
 const projectsButton = document.querySelector('.scroll-to-projects');
 const projectsArea = document.querySelector('#projects');
