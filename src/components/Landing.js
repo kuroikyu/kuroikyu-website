@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import FAIcon from '@fortawesome/react-fontawesome';
-import Behance from '@fortawesome/fontawesome-free-brands/faBehance';
-import Twitter from '@fortawesome/fontawesome-free-brands/faTwitter';
-import GitHub from '@fortawesome/fontawesome-free-brands/faGithub';
+import { FontAwesomeIcon as FAIcon } from '@fortawesome/react-fontawesome'
+import { faBehance as Behance } from '@fortawesome/free-brands-svg-icons/faBehance'
+import { faTwitter as Twitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faGithub as GitHub } from '@fortawesome/free-brands-svg-icons/faGithub'
 
 const Header = styled.header`
   padding: 8rem 0rem 0 13rem;
