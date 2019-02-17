@@ -1,6 +1,10 @@
 ![kuroikyu.com](./landing.jpg)
 
 ## Homepage
-This is the respository I use to build and host my personal website. Check it out at https://kuroikyu.com.
+This is the respository for my personal website. Check it out at https://kuroikyu.com.
 
-Thanks for stopping by!
+## The Stack
+* React.js - Front-end
+* Wordpress - Back-end
+* Cloudinary - Image hosting
+* Netlify - Hosting
