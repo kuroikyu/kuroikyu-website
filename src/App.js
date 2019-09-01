@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import './App.css';
+import projectsData from './projects.json'
 
 class App extends Component {
   state = {
@@ -19,9 +20,9 @@ class App extends Component {
     }
 
     // Fetch projects from API
-    const projects = await (await fetch('https://wp.kuroikyu.com/wp-json/wp/v2/projects/')).json();
     const windowWidth = window.innerWidth;
     this.setState({ projects, windowWidth });
+    const projects = projectsData
   }
 
   componentDidUpdate() {
