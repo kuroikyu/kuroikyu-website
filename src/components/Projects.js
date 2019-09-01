@@ -39,7 +39,7 @@ class Projects extends Component {
           {projects.map(project => (
             <div key={project.id}>
               <li>
-                <ProjectLink href={project.acf.link}>
+                <ProjectLink href={project.acf.link} target="_blank" rel="noopener">
                   open <ExternalLink />
                 </ProjectLink>
                 <Project
